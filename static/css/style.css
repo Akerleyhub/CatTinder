@@ -1,0 +1,40 @@
+.emoji1{
+    width:60px;
+    height:60px;
+    bottom:15px;
+}
+.emoji{
+    width:60px;
+    height:60px;
+}
+
+#profilepic{
+    width:15%;
+    height: auto;
+    position: relative;
+    z-index: 2;
+    bottom: 100px;
+    border: 5px solid #555;
+}
+.card-title-p,card-text-p{
+    bottom: 100px;
+}
+.card-img-top-profile{
+    width:65%;
+    height:auto;
+}
+.card-img-top {
+    width: 100%;
+    height: 26vw;
+    object-fit: cover;
+}
+.navbar-nav > li{
+    padding-left:30px;
+    padding-right:30px;
+}
+.nav-link{
+    font-size: large;
+}
+.logout{
+    padding-left:950px;
+}

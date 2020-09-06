@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% block title %}Cat Tinder{% endblock %}
+
+{% block content %}
+{%for msg in get_flashed_messages()%}
+  <p class = "justify-content-center">{{msg}}</p>
+{%endfor%}
+<div class = "d-flex justify-content-center">
+  <div class="card border-primary" style="width: 26rem;">
+      <!-- static/{{posty.postimg}} -->
+      {% if posty.postimg[0:4] != 'http' %}
+        <img src="/static/{{posty.postimg}}" class="card-img-top">
+      {% else %}
+        <img src="{{posty.postimg}}" class="card-img-top">
+      {% endif %}
+      <div class="card-body">
+        <h5 class="card-title">{{posty.title}}</h5>
+        <p class="card-text">{{posty.text}}</p>
+      </div>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item">By: {{userpost.username}}</li>
+      </ul>
+      <div class="card-body d-flex justify-content-center">
+        <a href="/like/{{posty.id}}" class="card-link emoji1"><img src = "/static/hearteye.png"></a>
+        <a href="/dislike/{{posty.id}}" class="card-link emoji"><img src = "/static/cricat.png"></a>
+      </div>
+  </div>
+</div>
+
+{%endblock%}
+
+<!-- 😻 😿 -->

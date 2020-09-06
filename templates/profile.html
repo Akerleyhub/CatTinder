@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block title %}Register{% endblock %}
+
+{% block content %}
+
+<div class="card d-flex justify-content-center">
+    <img class="card-img-top-profile" id ="profilebackground" src="{{url_for('static', filename=user.background_image)}}" alt="Card image cap">
+    <div class="card-body">
+      <img id = "profilepic" src = "{{url_for('static', filename=user.filename_image)}}">
+      <h5 class="card-title-p">{{user.username}}</h5>
+      <p class="card-text-p">{{user.bio}}</p>
+      <!-- <p class="card-text-p"><small class="text-muted">create on:{{user.date}}</small></p> -->
+    </div>
+</div>
+
+<form action="/{{user.id}}/update">
+  <input type="submit" value="Update Profile" />
+</form>
+<form action="/user/delete" method = 'POST'>
+  <input type="submit" value="Delete Profile" />
+</form>
+{%endblock%}

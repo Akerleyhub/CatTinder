@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block title %}Register{% endblock %}
+
+{% block content %}
+<h1>New Post</h1>
+    <form action="/{{user.id}}/newpost" method = "POST" enctype="multipart/form-data">
+        {{form.hidden_tag() }}
+        {%for field in form if field.widget.input_type != 'hidden'%}
+        <p> 
+            {{field.label}}
+            {{field}}
+            {% for err in field.errors %}
+                {{err}}
+            {%endfor%}
+        </p>
+
+        {%endfor%}
+        <button>Submit</button>
+    </form>
+
+
+{%endblock%}

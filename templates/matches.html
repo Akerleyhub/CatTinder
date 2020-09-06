@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block title %}Register{% endblock %}
+
+{% block content %}
+<ul>
+    <li>
+        {%for msg in get_flashed_messages()%}
+            <p>{{msg}}</p>
+        {%endfor%}
+        {% if user2 %}
+            <div class="card" style="width: 18rem;">
+                <img src="{{user2.filename_image}}" class="card-img-top" alt="...">
+                <div class="card-body">
+                <h5 class="card-title">{{user2.username}}</h5>
+                <p class="card-text">{{user2.bio}}</p>
+                </div>
+            </div>
+        {% else %}
+            <h2>You have no matches yet :(</h2>
+        {% endif %}
+    </li>
+</ul>
+{%endblock%}
