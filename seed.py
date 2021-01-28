@@ -8,7 +8,7 @@ from models import User, Post, Rating
 #from secrets import API_SECRET_KEY
 import requests
 from flask import request
-
+API_SECRET_KEY = "8a1cfd5e-17e9-4b4d-8661-765b9471a9ea"
 
 db.drop_all()
 db.create_all()
