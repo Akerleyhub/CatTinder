@@ -5,7 +5,7 @@
 API_BASE_URL = "https://api.thecatapi.com/v1/images"
 from app import db
 from models import User, Post, Rating
-from secrets import API_SECRET_KEY
+#from secrets import API_SECRET_KEY
 import requests
 from flask import request
 
