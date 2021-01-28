@@ -15,10 +15,10 @@ from sqlalchemy.exc import IntegrityError
 import random
 
 app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql:///cattinder'
+app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get('DATABASE_URL','postgresql:///cattinder')
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 app.config['SQLALCHEMY_ECHO'] = True
-app.config['SECRET_KEY'] = "meow"
+app.config['SECRET_KEY'] = os.environ.get("SECRET_KEY","meow")
 debug = DebugToolbarExtension(app)
 
 CURR_USER_KEY = "curr_user"
