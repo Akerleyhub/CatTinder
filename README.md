@@ -5,13 +5,13 @@ Toy web app using Flask to have a tinder format for Cats. Users can upload image
 Need to Input both pictures when creating a user(cats only please).
 
 + Technologies used: 
-   *Flask Framework
-   *Postgresql DB
-   *Languages
-     *Python
-     *HTML
-     *CSS
-   *Additional style: Bootstrap
+   +Flask Framework
+   +Postgresql DB
+   +Languages
+     +Python
+     +HTML
+     +CSS
+   +Additional style: Bootstrap
    
 + Launching App Instructions for Windows(Linux and Mac are slightly different):
   1. python -m venv venv
